@@ -1,0 +1,493 @@
+/* FONT */
+@font-face {
+	font-family: "Gotham";
+	src: url("../font/GothamPro-Light.ttf") format("truetype");
+	font-weight: 100;
+	font-style: normal;
+}
+
+@font-face {
+	font-family: "Gotham";
+	src: url("../font/GothamPro.ttf") format("truetype");
+	font-weight: 400; /* Normal weight */
+	font-style: normal;
+}
+
+@font-face {
+	font-family: "Gotham";
+	src: url("../font/GothamPro-Medium.ttf") format("truetype");
+	font-weight: 500;
+	font-style: normal;
+}
+
+@font-face {
+	font-family: "Gotham";
+	src: url("../font/GothamPro-Bold.ttf") format("truetype");
+	font-weight: 700;
+	font-style: normal;
+}
+
+@import url("https://fonts.googleapis.com/css?family=Montserrat:400,700|Raleway:400,500,600,700|Source+Sans+Pro:400,400i,600,600i,700,700i");
+
+/*
+################
+               THITO'S TEMPLATE 
+################
+*/
+
+:root {
+	--color-background: #f1efdf;
+	--color-background-2: #fffdf0;
+	--color-white: #ffffff;
+
+	--color-primary: #f87db3;
+	--color-secondary: #9065a3;
+
+	--color-info: #7d8da1;
+	--color-text: #622b80;
+	--color-text-muted: #575757;
+	--color-light: #848bc82e;
+	--color-danger: #ff0060;
+
+	--color-green: #1b9c85;
+	--color-dark-green: #04756a;
+	--color-blue: #6c9bcf;
+
+	--card-padding: 1.8rem;
+	--sm-card-padding: 0.3em;
+	--padding-section: 6rem;
+
+	--card-border-radius: 2rem;
+
+	--box-shadow: var(--color-light) 0px 8px 24px;
+	--btn-box-shadow: var(--color-light) 0px 5px 15px;
+}
+
+* {
+	margin: 0px;
+	padding: 0px;
+	text-decoration: none;
+	box-sizing: border-box;
+}
+
+html {
+	scroll-behavior: smooth;
+}
+
+body {
+	font-size: 1rem;
+	font-family: "Gotham", sans-serif;
+	background-color: var(--color-background);
+	color: var(--color-text);
+	overflow-x: hidden;
+}
+
+input,
+textarea {
+	font-family: "Poppins", sans-serif;
+}
+
+img {
+	width: 100%;
+	display: block;
+	object-fit: cover;
+}
+
+/*
+################
+               BUTTON 
+################
+*/
+
+.btn-group {
+	display: flex;
+	margin-top: 0.6rem;
+	gap: 1rem;
+}
+
+.btn-group > * {
+	flex: 1 1 auto;
+}
+
+.btn {
+	display: flex;
+	cursor: pointer;
+	justify-content: center;
+	align-items: center;
+	font-weight: 600;
+	border-radius: 0.2rem;
+	padding: 0.2rem 1rem;
+	position: relative;
+	transition: color 0.3s ease, background-color 0.3s ease;
+	outline: 0;
+}
+
+button.btn {
+	border: 0;
+	font-size: 1rem;
+	padding: 0.6rem 1rem;
+}
+
+.btn::after {
+	content: "";
+	position: absolute;
+	inset: 0;
+	border-radius: inherit;
+	box-shadow: var(--box-shadow);
+	opacity: 1;
+	transition: opacity 0.3s ease;
+}
+
+.btn:hover:after {
+	opacity: 0;
+}
+
+.btn.btn-add {
+	background-color: var(--color-green);
+	color: var(--color-white);
+}
+
+.btn.btn-add:hover {
+	background-color: var(--color-white);
+	color: var(--color-green);
+}
+
+.btn.btn-secondary,
+.btn.btn-danger {
+	background-color: var(--color-white);
+}
+
+.btn.btn-secondary {
+	color: var(--color-dark-green);
+}
+
+.btn.btn-danger {
+	color: var(--color-danger);
+}
+
+.btn.btn-secondary::after,
+.btn.btn-danger::after {
+	opacity: 0;
+}
+
+.btn.btn-secondary:hover:after,
+.btn.btn-danger:hover:after {
+	opacity: 1;
+}
+
+.btn.btn-secondary:hover,
+.btn.btn-danger:hover {
+	color: var(--color-white);
+}
+
+.btn.btn-secondary:hover {
+	background-color: var(--color-dark-green);
+}
+
+.btn.btn-danger:hover {
+	background-color: var(--color-danger);
+}
+
+/*
+################
+               BLEED 
+################
+*/
+
+.pink-bleed {
+	box-shadow: 0 0 0 100vmax var(--color-primary);
+	clip-path: inset(0 -100vmax);
+}
+
+.purple-bleed {
+	box-shadow: 0 0 0 100vmax var(--color-secondary);
+	clip-path: inset(0 -100vmax);
+}
+
+.bg2-bleed {
+	box-shadow: 0 0 0 100vmax var(--color-background-2);
+	clip-path: inset(0 -100vmax);
+}
+
+/*
+################
+               MAIN 
+################
+*/
+
+main {
+	padding-inline: 2.5rem;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+}
+
+/*
+################
+               HERO 
+################
+*/
+
+.hero {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	background-color: var(--color-primary);
+	color: var(--color-white);
+	padding-bottom: 1rem;
+}
+
+.hero-img {
+	width: 12rem;
+}
+
+.hero-desc {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	gap: 1rem;
+	text-align: center;
+}
+
+/*
+################
+               DIVIDER 
+################
+*/
+
+.pink-bg {
+	background-color: var(--color-primary);
+	color: var(--color-white);
+}
+
+.purple-bg {
+	background-color: var(--color-secondary);
+	color: var(--color-white);
+}
+
+.divider h3 {
+	color: var(--color-white);
+	font-size: 1rem;
+	font-weight: 500;
+}
+
+.divider {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	gap: 1rem;
+	padding-block: 1rem;
+	text-align: center;
+}
+
+.divider-quotes {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	max-width: 15rem;
+}
+
+.divider-quotes.mid {
+	border-block: 3px solid var(--color-background);
+	border-radius: 0.2rem;
+	padding-block: 0.5rem; 
+}
+
+.divider-quotes img {
+	width: 2rem;
+}
+
+@media (min-width: 425px) {
+	.divider {
+		flex-direction: row;
+	}
+
+	.divider-quotes.mid {
+		border-block: none;
+		border-inline: 3px solid var(--color-background);
+	}
+
+	.divider-quotes {
+		justify-content: space-between;
+	}
+}
+
+/*
+################
+                INFO-ACARA
+################
+*/
+
+.info-acara {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	gap: 1rem;
+	padding-block: 2rem;
+	background-color: var(--color-background-2);
+	/* max-width: 333px; */
+	max-width: 600px;
+}
+
+.info-acara .icon {
+	width: 2.5rem;
+}
+
+.info-acara p {
+	text-align: center;
+}
+
+.info-acara b.info-bold {
+	background-color: #c1fdff;
+	display: inline;
+	padding-inline: 0.25rem;
+	border-radius: 0.3rem;
+}
+
+/*
+################
+                DAFTAR-ACARA
+################
+*/
+
+.daftar-acara {
+	display: flex;
+	flex-direction: column;
+	align-items: stretch;
+	gap: 1rem;
+	padding-block: 2rem;
+}
+
+.daftar-acara .box {
+	background-color: var(--color-background-2);
+}
+
+.box {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	gap: 1rem;
+	padding: 1rem 2rem;
+	text-align: center;
+	border-radius: 0.4rem;
+}
+
+.box h4 {
+	font-size: 1.3rem;
+}
+
+.btn-daftar {
+	padding: 0.8rem;
+	background-color: var(--color-primary);
+	color: var(--color-white);
+}
+
+.btn-daftar:hover {
+	background-color: var(--color-background-2);
+	color: var(--color-primary);
+}
+
+@media (min-width: 425px) {
+	.daftar-acara {
+		flex-direction: row;
+		gap: 1rem;
+		padding-block: 2rem;
+	}
+
+	.box {
+		max-width: 322px;
+		justify-content: space-between;
+	}
+}
+
+
+/*
+################
+                GALLERY
+################
+*/
+
+.gallery {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	padding-block: 2rem;
+	gap: 1rem;
+}
+
+
+
+.gallery .img-collection img{
+	height: 250px;
+	border-radius: 0.5rem;
+	margin-bottom: 0.5rem;
+}
+
+@media (min-width: 425px) {
+	.gallery .img-collection  {
+		display: grid;
+		grid-template-columns: repeat(2, 1fr);
+		grid-template-rows: repeat(3, auto);
+		gap: 0.5rem;
+	}
+
+	.gallery .img-collection img{
+		height: 250px;
+		border-radius: 0.5rem;
+		margin-bottom: 0;
+	}
+
+	.gallery .img-collection img.top-gallery{
+		grid-column: span 2;
+		height: 400px;
+	}
+}
+
+
+/*
+################
+                SPONSOR
+################
+*/
+
+.sponsor {
+	padding-block: 2rem;
+	text-align: center;
+}
+
+.sponsor-img {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+}
+
+.sponsor-img img {
+	width: 13rem;
+	height: 100px;
+}
+
+@media (min-width: 425px) {
+	.sponsor-img {
+		flex-direction: row;
+		gap: 1rem;
+	}
+}
+
+
+/*
+################
+                QR-SECTION
+################
+*/
+
+.qr-section {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	padding-block: 2rem;
+	text-align: center;
+}
+
+.qr-section img {
+	width: 354px;
+}

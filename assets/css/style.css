@@ -290,7 +290,7 @@ main {
 }
 
 .divider-quotes.mid {
-	border-block: 3px solid var(--color-background);
+	position: relative;
 }
 
 .divider-quotes img {
@@ -307,12 +307,31 @@ main {
 	}
 
 	.divider-quotes.mid {
-		border-block: none;
 		border-inline: 3px solid var(--color-background);
 	}
 
 	.divider-quotes {
 		justify-content: space-between;
+	}
+}
+
+@media (max-width: 599px) {
+	.divider-quotes.mid::before,
+	.divider-quotes.mid::after {
+		content: "";
+		position: absolute;
+		left: -200px;
+		right: -200px;
+		height: 3px; /* Adjust the thickness as needed */
+		background-color: var(--color-background);
+	}
+
+	.divider-quotes.mid::before {
+		top: 0; /* Position at the top */
+	}
+
+	.divider-quotes.mid::after {
+		bottom: 0; /* Position at the bottom */
 	}
 }
 

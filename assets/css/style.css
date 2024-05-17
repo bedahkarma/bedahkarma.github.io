@@ -301,7 +301,7 @@ main {
 	padding: 0;
 }
 
-@media (min-width: 426px) {
+@media (min-width: 600px) {
 	.divider {
 		flex-direction: row;
 	}

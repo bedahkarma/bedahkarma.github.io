@@ -325,8 +325,7 @@ main {
 	.divider-quotes.mid::after {
 		content: "";
 		position: absolute;
-		left: -200px;
-		right: -200px;
+		width: 100dvw;
 		height: 3px;
 		/* Adjust the thickness as needed */
 		background-color: var(--color-background);
@@ -522,6 +521,7 @@ main {
 	align-items: center;
 	padding-block: 2rem;
 	text-align: center;
+	gap: 1rem;
 }
 
 .qr-box {
@@ -662,4 +662,3 @@ main {
 		max-width: 570px;
 	}
 }
-

@@ -472,6 +472,14 @@ main {
 	}
 }
 
+.donasi-link {
+	flex-direction: column;
+}
+
+.btn-donasi {
+	font-size: 1rem;
+}
+
 /*
 ################
                 SPONSOR
@@ -576,10 +584,6 @@ main {
 	max-height: 400px;
 	padding: 1rem;
 	border-radius: 1.2rem;
-}
-
-.btn-donasi {
-	font-size: 1.5rem;
 }
 
 @media (min-width: 426px) {

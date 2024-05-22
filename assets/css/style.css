@@ -236,6 +236,7 @@ main {
 	background-color: var(--color-primary);
 	color: var(--color-white);
 	padding-bottom: 1rem;
+	margin-bottom: 0.2rem;
 }
 
 .hero-img {

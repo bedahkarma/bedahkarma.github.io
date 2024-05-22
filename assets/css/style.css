@@ -618,6 +618,7 @@ main {
 	flex-direction: column;
 	align-items: start;
 	text-align: start;
+	color: var(--color-white);
 }
 
 @media (min-width: 426px) {
@@ -635,6 +636,14 @@ main {
 		text-align: end;
 	}
 }
+
+/* IOS */
+@media screen and (min-device-width: 320px) and (max-device-width: 1024px) and (-webkit-min-device-pixel-ratio: 2) {
+	.informasi-description b {
+		color: var(--color-white);
+	}
+}
+/* END IOS */
 
 /*
 ################

@@ -9,7 +9,8 @@
 @font-face {
 	font-family: "Gotham";
 	src: url("../font/GothamPro.ttf") format("truetype");
-	font-weight: 400; /* Normal weight */
+	font-weight: 400;
+	/* Normal weight */
 	font-style: normal;
 }
 
@@ -105,7 +106,7 @@ img {
 	gap: 1rem;
 }
 
-.btn-group > * {
+.btn-group>* {
 	flex: 1 1 auto;
 }
 
@@ -267,7 +268,7 @@ main {
 
 .divider h3 {
 	color: var(--color-white);
-	font-size: 1rem;
+	font-size: 0.8rem;
 	font-weight: 500;
 }
 
@@ -306,6 +307,10 @@ main {
 		flex-direction: row;
 	}
 
+	.divider h3 {
+		font-size: 1rem;
+	}
+
 	.divider-quotes.mid {
 		border-inline: 3px solid var(--color-background);
 	}
@@ -316,22 +321,26 @@ main {
 }
 
 @media (max-width: 599px) {
+
 	.divider-quotes.mid::before,
 	.divider-quotes.mid::after {
 		content: "";
 		position: absolute;
 		left: -200px;
 		right: -200px;
-		height: 3px; /* Adjust the thickness as needed */
+		height: 3px;
+		/* Adjust the thickness as needed */
 		background-color: var(--color-background);
 	}
 
 	.divider-quotes.mid::before {
-		top: 0; /* Position at the top */
+		top: 0;
+		/* Position at the top */
 	}
 
 	.divider-quotes.mid::after {
-		bottom: 0; /* Position at the bottom */
+		bottom: 0;
+		/* Position at the bottom */
 	}
 }
 
@@ -512,31 +521,69 @@ main {
 	display: flex;
 	flex-direction: column;
 	align-items: center;
-	gap: 1.5rem;
 	padding-block: 2rem;
 	text-align: center;
+}
+
+.qr-box {
+	position: relative;
+}
+
+.qr-box .top::before,
+.qr-box .top::after,
+.qr-box .bottom::before,
+.qr-box .bottom::after {
+	position: absolute;
+	width: 2rem;
+	height: 2rem;
+	content: "";
+	border: 3px solid var(--color-primary);
+}
+
+.qr-box .top::before {
+	top: 0;
+	right: 0;
+	border-top-right-radius: 0.8rem;
+}
+
+.qr-box .top::after {
+	top: 0;
+	left: 0;
+	border-top-right-radius: 0.8rem;
 }
 
 .qr-section .qr {
 	max-width: 200px;
 }
 
+.btn-donasi {
+	font-size: 1.5rem;
+}
+
+.informasi-donasi .logo_mandiri {
+	width: 5rem;
+	height: 40px;
+}
+
 .informasi-donasi {
 	display: flex;
-	justify-content: center;
+	flex-direction: column-reverse;
+	gap: 1rem;
+	padding-block: 0.4rem 1rem;
 }
 
-/* .informasi-donasi .description {
-	margin-top: 1.5rem;
-} */
-
-.informasi-donasi .description .logo_mandiri {
-	width: 5rem;
-	height: 50px;
+.informasi-description {
+	display: flex;
+	flex-direction: column;
+	align-items: start;
+	text-align: start;
 }
 
-.informasi-donasi .description p {
-	font-weight: 500;
+.cara-pembayaran {
+	padding: 1rem;
+}
+
+.cara-pembayaran h3 {
 	text-align: start;
 }
 
